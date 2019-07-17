@@ -25,8 +25,7 @@ GPIO.setup(shutdownPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 buttonPressedTime = None
 
-
-if __name__ == '__main__':
+def main()
     # subscribe to button presses
     GPIO.add_event_detect(shutdownPin, GPIO.BOTH, callback=buttonStateChanged)
 
@@ -69,3 +68,6 @@ def buttonStateChanged(pin):
             elif elapsed >= debounceSeconds:
                 call(['omxplayer', '--adev', 'local', pathToAudio + find + '/shutdown.wav'], shell=False)
                 call(['shutdown', '-h', 'now'], shell=False)
+               
+if __name__ == '__main__':
+    main()
