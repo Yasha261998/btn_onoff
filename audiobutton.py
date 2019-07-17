@@ -9,7 +9,7 @@ import time
 
 LanguageAll = ['uk', 'ru']
 pathToConfig = '~/MagicMirror/config/config.js.sample'
-pathToAudio = '~/audio/'
+pathToAudio = '~/btn_onoff/audio/'
 
 # waking / powering up Raspberry Pi when button is pressed
 shutdownPin = 3
